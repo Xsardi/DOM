@@ -17,11 +17,27 @@ function cb1handleClick(){
   else {progress.setMod("Animated", "");}
 }
 
-function cb2handleClick(){
+function cb2handleClick() {
     var checkbox = document.getElementById("cb2");
   if (checkbox.checked == true) {progress.setMod("Hidden");}
   else {progress.setMod("Normal", "");}
 }
+
+    /**
+    * @description нормализует скорость инпута
+    */
+var textInput = document.getElementById('input');
+var timeout = null;
+textInput.onkeyup = function (e) {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+       progress.setValue(textInput.value);
+    }, 250);
+};
+
+
+
+
 
 class progress {
   
