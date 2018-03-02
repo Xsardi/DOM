@@ -1,0 +1,144 @@
+h2 {
+    margin: 0;
+    position: relative;
+    top: -30px;
+    left: -40px;
+}
+
+.progress {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+
+.container { 
+  position: relative;  
+  animation: rotation 2s infinite linear;
+	animation-play-state: paused;
+  margin: 5% auto;
+  width: 200px;
+  height: 200px;
+}
+
+.circle-chart {
+  position: absolute;
+}
+
+.circle-chart__percent {
+  animation: circle-chart-appear 2s forwards;
+  opacity: 0;
+}
+
+.circle-chart__circle {
+  animation: circle-chart-fill .5s reverse; /* 1 */ 
+  transform: rotate(-90deg); /* 2, 3 */
+  transform-origin: center; /* 4 */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+#input {
+  border-radius: 34px;
+  border-style: solid;
+  height: 28px;
+  width: 56px;
+  text-align: center; 
+  font-size: 19px;
+  font-weight: bold;
+  outline: none;
+}
+
+.slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4a4a4a;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #efefef;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #7ed321;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+#interface {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#value, #animate, #hide {
+  left: 50%;
+}
+
+#cb1full, #cb2full, #input {
+  left: 10%;
+  transform: translateY(60%)
+  
+}
+
+#input, #value {
+  position: absolute;
+  top: 0%;
+}
+
+#cb1full, #animate   {
+  position: absolute;
+  top: 30%;
+}
+
+#cb2full, #hide {
+  position: absolute;
+  top: 60%;
+}
+
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}

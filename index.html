@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Timur</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!---->
+
+
+<block class="progress">
+  <h2>Progress</h2>
+  <section id="container" class="container">
+    <svg id ="circle-all" class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <circle class="circle-chart__background" stroke="#efefec" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+      <circle id="circle" class="circle-chart__circle" stroke="#ffdb4d" stroke-width="2" fill="none" stroke-linecap="round" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+    </svg>
+  </section>
+
+  <section id="interface" class="container">
+    
+    <p id="value">Value</p>
+    
+    <input type="text" id="input" value="" maxlength="3" oninput="progress.setValue()"></input>
+    <p id="animate">Animate</p>
+    
+    <label id="cb1full" class="switch">
+      <input id="cb1" type="checkbox" onclick="cb1handleClick();">
+      <span class="slider round"></span>
+    </label>
+  
+    <p id="hide">Hide</p>
+    <label id="cb2full" class="switch">
+      <input id="cb2" type="checkbox" onclick="cb2handleClick();">
+      <span class="slider round"></span>
+    </label>
+    
+</block>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
